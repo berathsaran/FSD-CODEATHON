@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dropdown Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu-button {
+      padding: 10px 16px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      min-width: 160px;
+      z-index: 1;
+      padding: 10px 0;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .dropdown p {
+      margin: 0;
+      padding: 10px 16px;
+      cursor: pointer;
+    }
+
+    .dropdown p:hover {
+      background-color: #f2f2f2;
+    }
+
+    .menu:hover .dropdown {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu" aria-haspopup="true" aria-expanded="false">
+    <button class="menu-button" aria-controls="dropdownMenu">Hover Me</button>
+    <div class="dropdown" id="dropdownMenu" role="menu">
+      <p role="menuitem">Option 1</p>
+      <p role="menuitem">Option 2</p>
+      <p role="menuitem">Option 3</p>
+    </div>
+  </div>
+
+</body>
+</html>
